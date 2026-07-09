@@ -1,0 +1,53 @@
+create database ABC ;
+
+#(SINGLE-LINE COMMENT) SCHEMA = DATABASE
+
+/*(MULTILINE COMMNET)
+	TABLE = ENTITY
+    COLUMN NAME = FIELD NAME 
+    DATA, RECORD, TUPLE, INFO = DETAIL OF DATA 
+	STUCTURE = NO.ROW AND NO.COLUMNS NAMES (TABLE) 
+*/
+
+#Data Redundancy = Unnecessary repetition (duplication) of data in a database.
+
+
+USE ABC ;
+
+CREATE TABLE AAA
+(
+A_ID INT ,
+A_FNAME varchar(5),
+A_AGE INT
+);
+
+INSERT INTO AAA values (1234, "REHAN", 19);
+INSERT INTO AAA values (4567, "KHAN", 22);
+INSERT INTO AAA values (4569, "KHANS", 12);
+
+SELECT * FROM AAA ;
+
+CREATE TABLE BBB (
+    B_ID INT PRIMARY KEY,
+    B_FNAME VARCHAR(10),
+    B_CITY TEXT
+);
+
+INSERT INTO BBB values (1111, "REHANKHAN", "AHEMDABAD");
+
+describe AAA ;
+
+describe BBB ;
+
+INSERT INTO BBB VALUES 
+(1112, "PATHAN", "AAAA"),
+(2223, "KHANS", "BBBB"),
+(3334, "ABCD", "CCCC");
+
+
+DELETE FROM AAA WHERE A_ID = 4567 ;
+
+DELETE FROM BBB WHERE B_ID = 1111 ;
+
+
+
